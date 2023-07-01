@@ -1,0 +1,24 @@
+div {
+    margin: 5px;
+}
+
+.unaffected {
+    background-color: lightgray;
+    width: max-content;
+}
+
+::deep .reveal-content,
+.reveal-content,
+::deep .reveal-content *,
+.reveal-content * {
+    background-color: palegreen;
+}
+
+.two-columns-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+/*
+.two-columns-grid .code {
+    font-family: Consolas, monospace;
+}*/

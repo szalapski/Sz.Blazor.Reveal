@@ -1,0 +1,31 @@
+.reveal {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 250ms ease-in-out;
+}
+
+.reveal-inline {
+    display: inline;
+    font-size: 0;
+    max-width: 0;
+    transition: font-size 250ms ease-in-out;
+    /*    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+*/
+}
+
+
+.reveal > .reveal-content {
+    overflow: hidden;
+}
+
+.reveal.reveal-show {
+    grid-template-rows: 1fr;
+}
+
+    .reveal.reveal-inline.reveal-show,
+    .reveal.reveal-show > .reveal-content {
+        font-size: 100%;
+        max-width: 100%;
+    }

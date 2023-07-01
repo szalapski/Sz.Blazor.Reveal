@@ -1,0 +1,39 @@
+﻿@using Sz.Blazor.Reveal
+
+
+<h1><code>Sz.Blazor.Reveal</code> component examples</h1>
+
+<button @onclick="ToggleAll">@(ShowExample1 ? "Hide" : "Show")</button>
+
+<h3><code>display: block</code>, <code>flex</code> elements</h3>
+
+<div class="two-columns-grid">
+    <div>
+        <div class="unaffected">Previous block.</div>
+        <Reveal When="ShowExample1">
+            <div>Example</div>
+            <div>Example second element</div>
+        </Reveal>
+        <div class="unaffected">Subsequent block.</div>
+    </div>
+    <pre><code>
+            @blockExampleString
+    </code></pre>
+</div>
+
+<h3><code>display: inline-block</code> elements</h3>
+<span class="unaffected">Previous span.</span>
+<Reveal When="ShowExample1" IsInline="@true">
+    <div style="display: inline-block">Inline Example</div>
+    <div style="display: inline-block">Example second element</div>
+</Reveal>
+<span class="unaffected">Subsequent span.</span>
+
+
+<h3><code>display: inline</code> elements</h3>
+<span class="unaffected">Previous span.</span>
+<Reveal When="ShowExample1" IsInline="@true">
+    <span>Inline Example</span>
+    <span>Example second element</span>
+</Reveal>
+<span class="unaffected">Subsequent span.</span>

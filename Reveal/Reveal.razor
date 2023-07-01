@@ -1,0 +1,20 @@
+﻿<div class="reveal @ShowCssClassName @InlineCssClassName">
+    <div class="reveal-content @InlineCssClassName">@ChildContent</div>
+</div>
+
+@code
+{
+    [Parameter]
+    public bool When { get; set; } = true;
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    [Parameter]
+    public bool IsInline { get; set; } = false;
+
+    private string? ShowCssClassName => When ? "reveal-show" : null;
+
+    private string? InlineCssClassName => IsInline ? "reveal-inline": null;
+}
+
