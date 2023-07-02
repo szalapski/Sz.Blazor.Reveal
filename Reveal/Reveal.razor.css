@@ -1,18 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
 .reveal {
     display: grid;
     grid-template-rows: 0fr;
     transition: grid-template-rows 250ms ease-in-out;
 }
 
-.reveal-inline {
+.reveal-inline, .reveal-inline * {
     display: inline;
-    font-size: 0;
-    max-width: 0;
+    font-size: 0 !important;
+    max-width: 0 !important;
+    border-width: 0 !important;
     transition: font-size 250ms ease-in-out;
-    /*    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-*/
 }
 
 
@@ -25,7 +26,10 @@
 }
 
     .reveal.reveal-inline.reveal-show,
+    .reveal.reveal-inline.reveal-show *,
     .reveal.reveal-show > .reveal-content {
-        font-size: 100%;
-        max-width: 100%;
+        font-size: 100% !important;
+        max-width: 100% !important;
+        border-width: inherit !important;
     }
+
