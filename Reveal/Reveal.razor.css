@@ -8,28 +8,48 @@
     transition: grid-template-rows 250ms ease-in-out;
 }
 
-.reveal-inline, .reveal-inline * {
-    display: inline;
-    font-size: 0 !important;
-    max-width: 0 !important;
-    border-width: 0 !important;
-    transition: font-size 250ms ease-in-out;
-}
-
-
-.reveal > .reveal-content {
-    overflow: hidden;
-}
-
-.reveal.reveal-show {
-    grid-template-rows: 1fr;
-}
-
-    .reveal.reveal-inline.reveal-show,
-    .reveal.reveal-inline.reveal-show *,
-    .reveal.reveal-show > .reveal-content {
-        font-size: 100% !important;
-        max-width: 100% !important;
-        border-width: inherit !important;
+    .reveal.reveal-inline {
+        display: inline-grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 250ms ease-in-out;
     }
 
+        .reveal .reveal-inline, .reveal .reveal-inline ::deep * {
+            display: inline;
+            font-size: 0;
+            transition: font-size 250ms ease-in-out;
+            margin-inline: 0;
+            border-width: 0;
+            padding-inline: 0;
+        }
+
+            .reveal .reveal-inline ::deep th,
+            .reveal .reveal-inline ::deep td {
+                border-width: 0;
+                padding: 0;
+                max-width: 0;
+            }
+
+    .reveal.reveal-show .reveal.reveal-inline ::deep th,
+    .reveal.reveal-show .reveal-inline ::deep td {
+        border-width: inherit;
+        padding: inherit;
+    }
+
+
+    .reveal > .reveal-content {
+        overflow: hidden;
+    }
+
+    .reveal.reveal-show {
+        grid-template-rows: 1fr;
+    }
+
+        .reveal.reveal-inline.reveal-show,
+        .reveal.reveal-inline.reveal-show *,
+        .reveal.reveal-show > .reveal-content {
+            font-size: 100% !important;
+            max-width: 100% !important;
+            border-width: inherit !important;
+            margin-inline: inherit;
+        }
