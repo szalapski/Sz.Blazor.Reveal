@@ -5,51 +5,36 @@
 .reveal {
     display: grid;
     grid-template-rows: 0fr;
-    transition: grid-template-rows 250ms ease-in-out;
+    transition: grid-template-rows ease-in-out, white-space 750ms jump-end;
+    transition-duration: 750ms;
 }
 
     .reveal.reveal-inline {
         display: inline-grid;
-        grid-template-rows: 0fr;
-        transition: grid-template-rows 250ms ease-in-out;
+        grid-template-columns: 0fr;
+        white-space: nowrap;
+        transition-property: grid-template-columns ease-in-out, font-size ease-in-out;
+        font-size: 0;
     }
-
-        .reveal .reveal-inline, .reveal .reveal-inline ::deep * {
-            display: inline;
-            font-size: 0;
-            transition: font-size 250ms ease-in-out;
-            margin-inline: 0;
-            border-width: 0;
-            padding-inline: 0;
-        }
-
-            .reveal .reveal-inline ::deep th,
-            .reveal .reveal-inline ::deep td {
-                border-width: 0;
-                padding: 0;
-                max-width: 0;
-            }
-
-    .reveal.reveal-show .reveal.reveal-inline ::deep th,
-    .reveal.reveal-show .reveal-inline ::deep td {
-        border-width: inherit;
-        padding: inherit;
-    }
-
-
     .reveal > .reveal-content {
         overflow: hidden;
     }
+    .reveal > .reveal-content *{
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+        .reveal.reveal-inline > .reveal-content {
+            display: inline;
+        }
 
     .reveal.reveal-show {
         grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        font-size: inherit;
+        overflow-x: inherit;
+        overflow-y: hidden;
     }
-
-        .reveal.reveal-inline.reveal-show,
-        .reveal.reveal-inline.reveal-show *,
-        .reveal.reveal-show > .reveal-content {
-            font-size: 100% !important;
-            max-width: 100% !important;
-            border-width: inherit !important;
-            margin-inline: inherit;
+        .reveal.reveal-show > .reveal-content * {
+            white-space: normal;
         }

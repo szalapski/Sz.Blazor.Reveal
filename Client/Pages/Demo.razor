@@ -32,18 +32,34 @@
     </tr>
 </table>
 
-<h3><code>display: inline-block</code> elements</h3>
-<span class="unaffected">Previous span.</span>
-<Reveal When="ShowExample1" IsInline="@true">
-    <div style="display: inline-block">Inline Example</div>
-    <div style="display: inline-block">Example second element</div>
-</Reveal>
-<span class="unaffected">Subsequent span.</span>
-
 <h3><code>display: inline</code> elements</h3>
 <span class="unaffected">Previous span.</span>
 <Reveal When="ShowExample1" IsInline="@true">
     <span>Inline Example</span>
-    <span>Example second element</span>
+    <span>
+        Example second element.
+    </span>
+</Reveal>
+<span class="unaffected">Subsequent span.</span>
+
+<h3>Long <code>display: inline</code> elements</h3>
+<span class="unaffected">Previous span.</span>
+<Reveal When="ShowExample1" IsInline="@true">
+    <span>Inline Example</span>
+    <span>
+        Example second element that is really long and probably needs
+        to word-wrap eventually when the browser is narrow enough and the font big enough.
+    </span>
+</Reveal>
+<span class="unaffected">Subsequent span.</span>
+
+
+<h3><code>display: inline-block</code> elements</h3>
+<span class="unaffected">Previous span.</span>
+<Reveal When="ShowExample1" IsInline="@true">
+    <div style="display: inline-block">Inline Example</div>
+    <div style="display: inline-block">
+        Example second element.
+    </div>
 </Reveal>
 <span class="unaffected">Subsequent span.</span>
