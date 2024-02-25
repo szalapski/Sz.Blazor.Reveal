@@ -5,15 +5,16 @@
 .reveal {
     display: grid;
     grid-template-rows: 0fr;
-    transition: grid-template-rows ease-in-out, white-space 750ms jump-end;
-    transition-duration: 750ms;
+    transition: grid-template-rows 1750ms ease-in-out, white-space 1750ms steps(1, end);
+    transition-duration: 500ms; /* overridden in razor inline */
 }
 
     .reveal.reveal-inline {
         display: inline-grid;
         grid-template-columns: 0fr;
         white-space: nowrap;
-        transition-property: grid-template-columns ease-in-out, font-size ease-in-out;
+        transition-property: grid-template-columns, font-size;
+        transition-timing-function: ease-in-out;
         font-size: 0;
     }
     .reveal > .reveal-content {

@@ -1,4 +1,5 @@
-﻿<div class="reveal @ShowCssClassName @InlineCssClassName">
+﻿<div class="reveal @ShowCssClassName @InlineCssClassName"
+     style="transition-duration: @(TransitionMilliseconds)ms;">
     <div class="reveal-content">@ChildContent</div>
 </div>
 
@@ -12,6 +13,9 @@
 
     [Parameter]
     public bool IsInline { get; set; } = false;
+
+    [Parameter]
+    public int TransitionMilliseconds { get; set; } = 500;
 
     private string? ShowCssClassName => When ? "reveal-show" : null;
 

@@ -1,6 +1,6 @@
 ## Sz.Blazor.Reveal
 
-Sz.Blazor.Reveal provides a Blazor component for ultra-simple Blazor transitions when elements or components are shown/hidden or added/removed.
+Sz.Blazor.Reveal provides a Blazor component for ultra-simple CSS transitions when elements or components are shown/hidden or added/removed.
 
 ### Components
 

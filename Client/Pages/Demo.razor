@@ -10,10 +10,11 @@
 <div class="two-columns-grid">
     <div>
         <div class="unaffected">Previous block.</div>
-        <Reveal When="ShowExample1">
+        <Reveal When="ShowExample1" TransitionMilliseconds="2000">
             <div>Example</div>
             <div>Example second element</div>
         </Reveal>
+
         <div class="unaffected">Subsequent block.</div>
     </div>
     <pre><code>
@@ -44,7 +45,7 @@
 
 <h3>Long <code>display: inline</code> elements</h3>
 <span class="unaffected">Previous span.</span>
-<Reveal When="ShowExample1" IsInline="@true">
+<Reveal When="ShowExample1" IsInline="@true" >
     <span>Inline Example</span>
     <span>
         Example second element that is really long and probably needs

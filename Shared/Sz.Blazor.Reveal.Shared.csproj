@@ -4,7 +4,24 @@
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>Blazor Reveal</Title>
+    <Version>0.1.1</Version>
+    <Authors>Patrick Szalapski</Authors>
+    <Description>Provides a Blazor component for ultra-simple CSS transitions when elements or components are shown/hidden or added/removed.
+</Description>
+    <Copyright>2023 Patrick Szalapski</Copyright>
+    <PackageProjectUrl>https://github.com/szalapski/Sz.Blazor.Reveal</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>CSS transitions; Blazor; Animation; Blazor component</PackageTags>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <SupportedPlatform Include="browser" />
