@@ -34,7 +34,7 @@ jobs:
       with:
           repo: ${{ github.repository }}
           ref: ${{ github.ref }}
-          path: dist
+          path: /home/runner/work/Sz.Blazor.Reveal/Sz.Blazor.Reveal/dist
 
     - name: Replaces gh-pages branch via JamesIves github-pages-deploy-action
       uses: JamesIves/github-pages-deploy-action@v4
