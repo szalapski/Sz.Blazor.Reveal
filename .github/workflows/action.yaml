@@ -34,13 +34,14 @@ jobs:
       with:
         repo: ${{ github.repository }}
         ref: ${{ github.ref }}
-        path: dist
+        path: dist/Web/wwwroot
 
     - name: Replaces gh-pages branch via JamesIves github-pages-deploy-action
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         branch: gh-pages
         folder: dist/Web/wwwroot
+        token: ${{ secrets.GITHUB_TOKEN }}
 
     permissions:
       contents: write
