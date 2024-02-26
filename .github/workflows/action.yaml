@@ -33,6 +33,7 @@ jobs:
       with:
         branch: gh-pages
         folder: dist/web/wwwroot
+        token: ${{ secrets.ACCESS_TOKEN }}
 
     permissions:
       contents: write
