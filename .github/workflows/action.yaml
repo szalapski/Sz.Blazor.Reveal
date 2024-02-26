@@ -28,6 +28,14 @@ jobs:
     - name: Publish .NET project
       run: dotnet publish Server/Sz.Blazor.Reveal.Server.csproj -c:Release -p:GHPages=true -o dist/Web --nologo
 
+    - name: List Files
+      id: list-files
+      uses: mirko-felice/list-files-action@v3.0.5
+      with:
+          repo: ${{ github.repository }}
+          ref: ${{ github.ref }}
+          path: "dist/Web/wwwroot"
+
     - name: Replaces gh-pages branch via JamesIves github-pages-deploy-action
       uses: JamesIves/github-pages-deploy-action@v4
       with:
