@@ -26,7 +26,7 @@ jobs:
       run: dotnet workload install wasm-tools
 
     - name: Publish .NET project
-      run: dotnet publish Sz.Blazor.Reveal/Sz.Blazor.Reveal.Server.csproj -c:Release -p:GHPages=true -o dist/Web --nologo
+      run: dotnet publish Server/Sz.Blazor.Reveal.Server.csproj -c:Release -p:GHPages=true -o dist/Web --nologo
 
     - name: Replaces gh-pages branch via JamesIves github-pages-deploy-action
       uses: JamesIves/github-pages-deploy-action@v4
