@@ -32,16 +32,16 @@ jobs:
       id: list-files
       uses: mirko-felice/list-files-action@v3.0.5
       with:
-          repo: ${{ github.repository }}
-          ref: ${{ github.ref }}
-          path: /home/runner/work/Sz.Blazor.Reveal/Sz.Blazor.Reveal/dist
+        repo: ${{ github.repository }}
+        ref: ${{ github.ref }}
+        path: dist
 
     - name: Replaces gh-pages branch via JamesIves github-pages-deploy-action
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ GITHUB_TOKEN }}
         BRANCH: gh-pages
-        FOLDER: dist
+        FOLDER: dist/Web/wwwroot
 
     permissions:
       contents: write
