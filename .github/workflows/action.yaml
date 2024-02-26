@@ -33,7 +33,6 @@ jobs:
       with:
         branch: gh-pages
         folder: dist/web/wwwroot
-        token: ${{ secrets.GITHUB_TOKEN }}
 
     permissions:
       contents: write
