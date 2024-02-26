@@ -1,0 +1,33 @@
+@import '_content/Sz.Blazor.Reveal/Sz.Blazor.Reveal.bundle.scp.css';
+
+/* /Pages/Demo.razor.rz.scp.css */
+div[b-7n3ko12jfd] {
+    margin: 5px;
+}
+
+.unaffected[b-7n3ko12jfd] {
+    background-color: lightgray;
+    width: max-content;
+}
+
+[b-7n3ko12jfd] .reveal-content,
+.reveal-content[b-7n3ko12jfd],
+[b-7n3ko12jfd] .reveal-content *,
+.reveal-content *[b-7n3ko12jfd] {
+    background-color: palegreen;
+}
+
+table[b-7n3ko12jfd] {
+    border-collapse: collapse;
+}
+table tr td[b-7n3ko12jfd], table tr th[b-7n3ko12jfd] {
+    border: 1px solid lightgray;
+}
+.two-columns-grid[b-7n3ko12jfd] {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+/*
+.two-columns-grid .code {
+    font-family: Consolas, monospace;
+}*/
