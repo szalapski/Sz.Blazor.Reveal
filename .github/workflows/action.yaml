@@ -26,21 +26,13 @@ jobs:
       run: dotnet workload install wasm-tools
 
     - name: Publish .NET project
-      run: dotnet publish Server/Sz.Blazor.Reveal.Server.csproj -c:Debug -p:GHPages=true -o dist/Web --nologo
-
-    - name: List Files
-      id: list-files
-      uses: mirko-felice/list-files-action@v3.0.5
-      with:
-        repo: ${{ github.repository }}
-        ref: ${{ github.ref }}
-        path: .
+      run: dotnet publish Server/Sz.Blazor.Reveal.Server.csproj -c:Debug -p:GHPages=true -o dist/web --nologo
 
     - name: Replaces gh-pages branch via JamesIves github-pages-deploy-action
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         branch: gh-pages
-        folder: dist/Web/wwwroot
+        folder: dist/web/wwwroot
         token: ${{ secrets.GITHUB_TOKEN }}
 
     permissions:
