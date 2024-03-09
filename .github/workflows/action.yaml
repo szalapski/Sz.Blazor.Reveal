@@ -29,9 +29,6 @@ jobs:
     - name: Publish .NET project
       run: dotnet publish Server/Sz.Blazor.Reveal.Server.csproj -c:Debug -p:GHPages=true -o dist/web --nologo
 
-    - name: Change base-tag in index.html from / so GH Pages can run it in a virtual subdirectory
-      run: sed -i 's|<base href="/"|<base href="/Sz.Blazor.Reveal/"|g' dist/web/wwwroot/index.html
-
     - name: Replaces gh-pages branch via JamesIves github-pages-deploy-action
       uses: JamesIves/github-pages-deploy-action@v4
       with:
