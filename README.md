@@ -23,3 +23,10 @@ Sz.Blazor.Reveal provides a Blazor component for ultra-simple CSS transitions wh
 	  <EditForm>Any Blazor component instance</EditForm>
   </Reveal>
   ```
+
+  ### Wishlist
+  
+  [_] Fix GH Actions and local deployments so both work
+  [] Make inline transitions disappear better
+  [] set up oh-my-posh
+  [] 
