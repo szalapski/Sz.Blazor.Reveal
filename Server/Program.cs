@@ -1,12 +1,11 @@
-using Microsoft.AspNetCore.ResponseCompression;
 using Sz.Blazor.Reveal.Server;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
-builder.Services.AddRazorComponents()
-    .AddInteractiveWebAssemblyComponents();
+builder.Services.AddRazorComponents().AddInteractiveWebAssemblyComponents();
+builder.Services.AddRazorComponents(options => options.DetailedErrors = builder.Environment.IsDevelopment());
 
 var app = builder.Build();
 
