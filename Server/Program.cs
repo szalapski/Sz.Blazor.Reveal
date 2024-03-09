@@ -1,9 +1,12 @@
 using Microsoft.AspNetCore.ResponseCompression;
+using Sz.Blazor.Reveal.Server;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+builder.Services.AddRazorComponents()
+    .AddInteractiveWebAssemblyComponents();
 
 var app = builder.Build();
 
@@ -19,13 +22,15 @@ else
 }
 
 app.UseHttpsRedirection();
-app.UseBlazorFrameworkFiles();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseAntiforgery();
 
 app.MapRazorPages();
 app.MapControllers();
-app.MapFallbackToFile("index.html");
+app.MapRazorComponents<App>()
+    .AddInteractiveWebAssemblyRenderMode()
+    .AddAdditionalAssemblies(typeof(Sz.Blazor.Reveal.Client._Imports).Assembly);
 
 app.Run();

@@ -3,8 +3,6 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Sz.Blazor.Reveal.Client;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
-builder.RootComponents.Add<App>("#app");
-builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services.AddHttpClient("Sz.Blazor.Reveal.ServerAPI", client => client.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress));
 

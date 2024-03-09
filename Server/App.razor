@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <base href="/" />
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="Sz.Blazor.Reveal.Server.styles.css" rel="stylesheet" />
+    <HeadOutlet @rendermode="new InteractiveWebAssemblyRenderMode(prerender: false)" />
+</head>
+
+<body>
+    <Routes @rendermode="new InteractiveWebAssemblyRenderMode(prerender: false)" />
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+    <script src="_framework/blazor.web.js"></script>
+</body>
+
+</html>
