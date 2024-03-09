@@ -36,8 +36,8 @@ jobs:
         folder: dist/web/wwwroot
         token: ${{ secrets.ACCESS_TOKEN }}
 
-    - name: Change base-tag in index.html from / to BlazorGitHubPagesDemo
-      run: sed -i 's/<base href="\/" \/>/<base href="\/Sz.Blazor.Reveal\/" \/>/g' release/wwwroot/index.html
+    - name: Change base-tag in index.html from /
+      run: sed -i 's/<base href="\/" \/>/<base href="\/Sz.Blazor.Reveal\/" \/>/g' dist/web/wwwroot/index.html
 
     permissions:
       contents: write
