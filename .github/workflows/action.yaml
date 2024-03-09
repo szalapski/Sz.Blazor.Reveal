@@ -39,6 +39,5 @@ jobs:
         folder: dist/web/wwwroot
         token: ${{ secrets.ACCESS_TOKEN }}
 
-
     permissions:
       contents: write
