@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - master
+      - gh-attempt-2
   pull_request:
     branches:
       - master
